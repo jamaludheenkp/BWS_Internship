@@ -1,0 +1,45 @@
+
+.bg-img {
+    background-image: url("main.jpg");
+    opacity: 0.8; 
+    min-height: 700px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+.container-fluid .navbar-brand{
+  font-family: poppins;
+  letter-spacing: 3px;
+
+}
+.container-fluid .navbar-brand .sub{
+  text-align: center;
+  color: red;
+  font-size: 30px;
+  letter-spacing: 3px;
+  
+}
+  
+.navbar-nav .nav-link.active{
+  color:  #050505;
+  font-size: 18px;
+  font-family: poppins;
+  letter-spacing: 3px;
+}
+.navbar-nav .nav-link.active:hover{
+color: red;
+}
+
+.container .row .col-md-6 h1{
+  font-size: 3.5rem;
+  color: rgba(0, 0, 0, 0.506);
+  font-weight: 900;
+  letter-spacing: 5px;
+  font-family: poppins;
+
+}
+.btn{
+  width: 200px;
+  height: 50px;
+}
