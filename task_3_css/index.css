@@ -1,0 +1,58 @@
+.header {
+    color: darkorange;
+    text-align: center;
+}
+body{
+    text-align: center;
+}
+ul {
+    list-style-type: none;
+    margin: 0%;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+    text-align: center;
+    font-weight: 900;
+    
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 25px 55px;
+    text-decoration: none;
+  }
+  
+  
+  li a:hover {
+    background-color: rgb(247, 178, 118);
+    color: black;
+    font-size: large;
+    font-weight: 900;
+  }
+.links{
+    text-align: center;
+    margin-top: 30px;
+}
+.links a{
+    text-decoration: none;
+    padding: 20px;
+
+}
+.para p{
+  margin-left: 36%;
+  max-width: 350px;
+  font-family: monospace;
+  font-size: 15px;
+  font-weight: 400;
+
+}
+.cp-text{
+  color: black;
+  text-shadow: #333;
+}
