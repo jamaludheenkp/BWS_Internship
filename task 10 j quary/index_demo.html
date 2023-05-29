@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>j quary</title>
+
+    <style>
+        .sayHello {
+            /* display: none; */
+            color: blueviolet;
+        }
+
+        .sayHello_newClass {
+            font-size: 70px;
+            color: red;
+            
+        }
+        .animation_box {
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 class="className">
+        hello world...
+    </h1>
+
+
+    <button class="btn">
+        click me 
+    </button>
+
+    <p class="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis eveniet temporibus et maiores iusto suscipit sit sunt, repellendus iste itaque blanditiis ratione in quisquam quas officiis culpa pariatur perspiciatis reprehenderit.</p>
+    <p id="delete-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ullam quibusdam provident dolore in perferendis alias, libero saepe ipsam temporibus accusamus delectus dolorum deserunt veniam vel, itaque, quae incidunt cupiditate.</p>
+
+
+    <section id="about">
+        <!-- some text here -->
+    </section>
+    <br>
+    <br>
+    <hr>
+    <br>
+
+    <input class="blur" type="text" value="">
+
+    <br><br><br><hr>
+
+    <div class="target">
+        some text here at this div
+    </div>
+
+    <br><br><br><hr>
+
+
+    <form action="">
+        <input type="text" placeholder="user name">
+        <input type="password" placeholder="password">
+
+        <button type="submit "> Login</button>
+    </form>
+
+    <br><br><br><hr>
+
+
+    <button type="button" id="say"> say Hello</button>
+    <button type="button" id="undo"> undo / class remove</button>
+    <button type="button" id="show_hide"> show / hide </button>
+    <div class="sayHello" >
+        <h1 class="sayHello"> hello connections Hai everyone </h1>
+    </div>
+
+    <br><br><br><hr>
+
+    <button id="animation_btn"> click to animate</button>
+    <div class="animation_box">
+
+    </div>
+
+    <br><br><br><hr>  
+    <!-- looping the elements with jquary -->
+
+    <ul>
+        <li>first item </li>
+        <li>second item </li>
+        <li>third item </li>
+    </ul>
+
+    <br><br><br><hr>  
+    <h3> change input attributes</h3>
+
+    <input class="toPassword"  type="text" style="width: 200px; height: 30px">
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script>
+
+
+
+        $(document).ready(function () {
+
+            // some j quary code here
+
+            $('h1.className').text("hello qlbee hope you are fine")
+            $(document).ready(function (){ 
+                alert("you changed heading")
+                console.log("changed text by jquary")
+            })
+
+            
+            
+            $('.btn').text(" connect me")
+            $('.btn').click( function () {
+                console.log("button clicked");
+                prompt('are you comfort.... on this change')
+            })
+            
+            
+            // $("#about").html("<h1> <strong> its all about me </h1> <p> some paragaph.................... ")
+                
+                
+                // pick a input value from a form input with jQuary
+                
+                const value = $('input').val() 
+                console.log(value);
+                
+                
+                // append and prepend 
+                // some text add from the beginning and some add last one 
+                
+                // $('h1')
+                // .append ("<u> some add underline text") 
+                //     .prepend(" <i> some add italic text")
+                        
+                        
+                        // before and after in jquary
+                        
+                        $('div.target')
+                        .before("<b> add some text before")
+                            .after("<button> click me ")
+                                
+                                
+                                // deleting some elements
+                                
+                                $("p#delete-para").remove()
+                                
+                                //blur event litseners in input_______ example of website url making
+                                
+                                
+                                $("input.blur").on('blur', function() {
+                                    // console.log("input functiioooooon")
+                                    
+                                    let websiteUrl = $(this).val()
+                                    if (websiteUrl.substr(0, 4) !== "http") {
+                                        websiteUrl = `http://${websiteUrl}`
+                                    }
+                                    $(this).val(websiteUrl)
+                                    console.log(websiteUrl);
+                                })
+                                
+                                
+            // form submitting event listeners 
+            
+            $("form").on("submit", function (event) {
+                event.preventDefault()
+                console.log("form was not submitted");
+            })
+
+            $("form").on("click", function (event) {
+                event.preventDefault()
+                console.log("submitting failed again");
+            })
+
+            //add css class and show/ hide elements 
+
+            $('#say').on("click", function (e) {
+                e.preventDefault()
+                $(".sayHello").addClass("sayHello_newClass")
+
+            })
+
+            $('#undo').on("click", function () {
+                $(".sayHello").removeClass("sayHello_newClass")
+            })
+            
+            $("#show_hide").on ("click" , function () {
+                $(".sayHello").toggleClass("sayHello_newClass")
+                $('.sayHello_newClass').fadeToggle(3000)
+                $('.sayHello_newClass').slideToggle(3000)
+
+            })
+
+            // add custom css to elements 
+
+            $("button")
+            .css({
+                backgroundColor : "green",
+                color: "white",
+                width:"100px",
+                hight:"100px",
+                border: "2px solid black",
+                borderRadius: "10px"
+            })
+
+
+            // add a custom animation to elements 
+
+            $(" #animation_btn").on ("click", function () {
+                $(".animation_box")
+                    .animate ({
+                        width : "100%",
+                        opacity : 0.8,
+                    }, 3000)
+            })
+
+             
+            // looping through the elements with jquary  = { for each()}
+
+            $("li").each (function (index, element) {
+                const originalText = $(element).text()
+                $(element).text(`${index + 1} __  ${originalText}`)
+            })
+
+            // how to change elements attributes___eg : input field to password
+
+            $("input.toPassword").attr("type", "password")
+
+
+
+
+            // ajax get request for API datas 
+
+            $.get('https://swapi.dev/api/people/1/', function(data) {
+                console.log(data['name']);
+                console.log(data['mass']);
+                console.log(data['height']);
+            })
+
+            //post request 
+
+            $.post('https://httpbin.org/post', 
+            {"instagram": "jamal_u_dheen"}, 
+            function(data) {
+                console.log("datas posted successfully");
+                console.log(data);
+            })
+
+
+
+            
+                                
+                                
+        })
+    </script>
+    </body>
+    </html>
