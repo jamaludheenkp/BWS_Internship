@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        #myButton {
+             background-color: green;
+             color: white;
+             width: 300px;
+             height: 50px;
+             text-align: center;
+             margin-left: 450px ;
+             margin-top: 50px;
+             cursor: pointer;
+             font-size: 30px;
+        }
+        #myData {
+            text-align: center;
+
+        }
+        ol {
+            
+            margin-left: 300px;
+            margin-top: 100px;
+        }
+       
+    </style>
+</head>
+<body>
+
+    <div >
+        <button id="myButton" >Get data </button>
+    </div>
+    <div id="myData">
+        <!-- <h3> Names</h3> -->
+
+    </div>
+    
+
+    <script>
+    // Get the button and data elements 
+    const button = document.querySelector('#myButton')
+    const dataElement = document.querySelector('#myData');
+
+
+    button.addEventListener('click', function() {
+
+        // Fetch the data from the server
+        fetch('https://jsonplaceholder.typicode.com/users')
+        .then(response => response.json())
+        .then(data => {
+
+             // Create a new list element for each user
+            const userList = document.createElement('ol');
+            data.forEach(user => {
+                const listItem = document.createElement('li');
+                listItem.textContent = user.name;
+                userList.appendChild(listItem);
+            });
+
+            // Append the list to the data element
+            dataElement.appendChild(userList);
+            })
+                .catch(error => console.error(error));
+            });
+
+
+    </script>
+</body>
+</html>

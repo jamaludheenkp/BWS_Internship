@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+        //------------ time out and inervel ----------------
+
+                    // setTimeout(function(){
+                    //     console.log("something loded")
+                    // }, 3000)
+
+
+        //-------------- inerval ---------
+
+                    // var count = 0;
+                    
+                    // console.log("your loading is started")
+
+                    // const myInterval = setInterval(()=>{
+                    //     console.log("intervel is loading");
+                    //     count++;
+
+                    //     if (count === 5){
+                    //         clearInterval(myInterval)
+                    //         console.log("this is last inertval call");
+                    //     }
+                        
+                    // },2500)
+        
+
+        //---------- while loop --------
+
+                // let num = 0
+                // while (num <= 100) {
+                //     console.log(num);
+                //     num++;
+                // }
+
+        // while (true) {
+
+                //     let name = prompt("what is your fav name ? ")
+                //      if (name === "thoothi") {
+                //         break;
+                //      }
+                //      console.log("wrong name.... try again..☺️");
+                // }
+
+
+        // --------- array destructering method ---------
+
+                    // const months = [ 'january', 'february', 'march', 'april', 'may']
+
+                    // const [jan, feb, mar] = months;
+                    // console.log(jan,feb, mar)
+
+        
+        // ---------- objects destructering ---------
+                    
+                    // const person1 = {
+                    //     name: "jamaludheen",
+                    //     age: 23,
+                    //     palce:"malappuram",
+                    //     profession: " software developer"
+                    // }
+
+                    // const {name, place, prof} = person1
+
+        // ------ Deleting objects propreties --------
+                    // "use strict";
+                    // const person2 = {
+                    //     'name' : 'razz',
+                    //     'age' : 22, 
+                    //     'profession' : "teacher",
+                    //     'place' : 'kottakkal'
+                    // }
+                    // delete person2['age']
+                    // console.log(person2)
+
+        //-----random numbers guessing game------
+                        
+                    // while (true) {
+                    //     let number = prompt("hello... guess the numer");
+                    //         number = Number(number)
+                    //     const guesNumber = Math.ceil(Math.random() * 10)
+                    
+                    //     if (number === guesNumber) {
+                    //         alert("you win this game...!")
+                    //         break;
+                    //     }else{
+                    //         console.log(`you guessed thhis number ${number}, but the right one ${guesNumber}`);
+                    //     }
+                    // }
+
+
+        //---- handling error {try catch finally}---------
+
+                // const name = "jazz"
+
+                // try {
+                //     let name = "razz"
+                //     throw name,"allready name exist"
+                    
+                // }catch (err) {
+                //     console.warn("loging error: ", err);
+                // }finally{
+                //     console.log(`your current name is ${name}`);
+                // }
+
+        // ------ javascript classes (class and objects) --------
+
+                    // class ourWorld {
+
+                    //     setName(he, she){
+                    //        this.he = he
+                    //        this.she = she
+                    //     }
+                    //     ourHeaven() {
+                    //         if (this.he === undefined && this.she === undefined){
+                    //             this.he ="kuttimon",
+                    //             this.she = "thoothi"
+
+                    //         }
+                    //         console.log(`this is our heaven only you  ${this.he} & me ${this.she}`)
+                    //     }
+                    // }
+                    //  const our = new ourWorld();
+                    //  our.setName()
+                    //  our.ourHeaven()
+
+
+                    // class person {
+                    //     constructor (name) {
+                    //         this.name = name;
+                    //     }
+
+                    //     greeting () {
+                    //         console.log(` hello all welcome  ${this.name}`);
+                    //     }
+                    // }
+
+                    // const jazz = new person ("its me jazz")
+                    // jazz.greeting()
+
+
+        // ------ fetch API requests ------
+
+                        
+                    fetch ('https://swapi.dev/api/starships/9/')
+                    .then (response => response.json())
+                    .then (data => {
+                        console.log(data);
+                    })
+                    
+
+
+    </script>
+
+</body>
+</html>
