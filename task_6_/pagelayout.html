@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            padding: 0;
+            margin: 0;
+
+        }
+        #layout {
+            display: flex;
+            flex-wrap: wrap;
+            
+        }
+        #nav {
+            flex-basis: 100%;
+            border-bottom: 1px solid #aaa;
+            padding: 20px;
+            text-align: center;
+            
+        }
+        #side-bar {
+            flex-basis: 20%;
+            border-bottom: 1px solid #aaa;
+            border-right: 1px solid #aaa;
+            padding: 20px;
+
+        }
+        #topics {
+            flex-basis: 80%;
+            border-bottom: 1px solid #aaa;
+            padding: 20px;
+
+        }
+
+        @media (max-width: 640px) {
+            #side-bar, #topics {
+                flex-basis: 100%;
+                border-right: 0;
+                border-bottom: 1px solid #aaa;
+
+            }
+        }
+        @media (max-width: 475px) {
+            #side-bar {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="layout">
+        <div id="nav">
+            <h1> Subjects </h1>
+        </div>
+        <div id="side-bar">
+            <h3>1. Maths </h3>
+           <br>
+            <h3>2. Science </h3>
+            <br>
+            <h3>3. English</h3>
+        </div>
+        <div id="topics">
+            <h4> Maths</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eaque officia vitae atque ratione qui esse perspiciatis numquam quod laboriosam sapiente delectus, commodi deleniti debitis voluptatem exercitationem mollitia est! Amet!</p>
+            <hr>
+            <h4> Science</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores non illo libero explicabo eius obcaecati voluptate accusantium aspernatur laudantium officiis. Tempore blanditiis veritatis in ipsa alias aperiam illo omnis harum.</p>
+            <hr>
+            <h4> English </h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur possimus dolorum optio, ea ratione perferendis voluptates nostrum corporis! Quos facere magnam et, tempore eius molestias provident adipisci? Pariatur, rem quod!</p>
+
+        
+        </div>
+    </div>
+</body>
+</html>
