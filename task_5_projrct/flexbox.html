@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .container div {
+            /* border: 1px solid red; */
+            
+        }
+        .container .header {
+            flex-basis: 100%;
+            flex-grow: 0;
+            flex-shrink: 1;
+            padding: 20px;
+            text-align: center;
+            background-color: #f5f5f5;
+            border-bottom:  3px black solid;
+
+        }
+        .container .navigation {
+
+            flex-basis: 20%;
+            flex-grow: 0;
+            flex-shrink: 1;
+            padding: 10px;
+            text-align: center;
+        }
+        .container .topic {
+            flex-basis: 70%;
+            flex-grow: 1;
+            flex-shrink: 0;
+            padding: 20px;
+
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header"> 
+            <h1> Subject of Topics</h1>
+        </div>
+        <div class="navigation">
+            <h3>
+                subject of impotents
+            </h3>
+        </div>
+        <div class="topic">
+            <h1> Computer Science </h1>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum sunt fuga enim hic omnis distinctio porro, a et est voluptatibus voluptas, vero nihil iure. Rem aperiam cumque et vel atque?
+            </p>
+            <h3> Programming languages</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, optio saepe ipsam molestias quod animi soluta quo labore sunt quia excepturi! Labore recusandae aut consequatur molestias sequi voluptatibus, non sint.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 500px;
+            height: 500px;
+            border: 3px solid black;
+            position: relative;
+            padding: 5px;
+            margin: 50px auto ;
+            overflow: auto;
+        }
+        .box::-webkit-scrollbar { 
+             display: none;
+        }
+        .box p {
+            margin: 5px;
+            text-align-last: justify;
+
+        }
+        p::first-letter  {
+            font-size: 50px;
+            float: left;
+            margin: 5px;
+        }
+        p::first-line {
+            font-weight: bold;
+        }
+        p a {
+            color: black;
+            text-decoration: none;
+            position: relative;
+            font-weight: 800;
+        }
+        p a::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            background-color: yellow;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+
+            
+            
+        }
+        a:hover::before {
+            height: 18px;
+        }
+        ::selection {
+            color: white;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+         <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. In ullam dicta est cupiditate cumque fuga qui hic perspiciatis dolores nam voluptatem alias sint magni beatae recusandae esse numquam, dolorem cum!ipsum dolor sit amet consectetur adipisicing elit. Veritatis dolorum temporibus <a href="#"> get the more contents</a> ipsam eos accusantium quia quidem saepe amet officiis ab ad, quod laboriosam sapiente magnam corporis nobis pariatur cupiditate mollitia?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo inventore corrupti excepturi ullam facere placeat sint natus fugit est debitis voluptate, exercitationem similique dolorem, voluptates mollitia. Iusto aliquid architecto culpa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto placeat esse, minima ab eaque dolore. Officia, laudantium, suscipit autem pariatur iste molestias at animi earum, modi quas ullam eos sunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quibusdam consequuntur impedit dolorum? Sunt atque adipisci magnam aliquid dolore aperiam enim consequatur possimus quas harum nam esse, amet corrupti cupiditate!apiente magnam corporis nobis pariatur cupiditate mollitia?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo inventore corrupti excepturi ullam facere placeat sint natus fugit est debitis voluptate, exercitationem similique dolorem, voluptates mollitia. Iusto aliquid architecto culpa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto placeat esse, minima ab eaque dolore. Officia, laudantium, suscipit autem pariatur iste molestias at animi earum, modi quas ullam eos sunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quibusdam consequuntur impedit dolorum? Sunt atque adipisci magnam aliquid dolore aperiam enim consequatur possimus quas harum nam esse, amet corrupti cupiditate!
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis dolorum temporibus <a href="#"> get the more contents</a> ipsam eos accusantium quia quidem saepe amet officiis ab ad, quod laboriosam sapiente magnam corporis nobis pariatur cupiditate mollitia?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo inventore corrupti excepturi ullam facere placeat sint natus fugit est debitis voluptate, exercitationem similique dolorem, voluptates mollitia. Iusto aliquid architecto culpa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto placeat esse, minima ab eaque dolore. Officia, laudantium, suscipit autem pariatur iste molestias at animi earum, modi quas ullam eos sunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quibusdam consequuntur impedit dolorum? Sunt atque adipisci magnam aliquid dolore aperiam enim consequatur possimus quas harum nam esse, amet corrupti cupiditate!apiente magnam corporis nobis pariatur cupiditate mollitia?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo inventore corrupti excepturi ullam facere placeat sint natus fugit est debitis voluptate, exercitationem similique dolorem, voluptates mollitia. Iusto aliquid architecto culpa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto placeat esse, minima ab eaque dolore. Officia, laudantium, suscipit autem pariatur iste molestias at animi earum, modi quas ullam eos sunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quibusdam consequuntur impedit dolorum? Sunt atque adipisci magnam aliquid dolore aperiam enim consequatur possimus quas harum nam esse, amet corrupti cupiditate!
+        </p>
+            
+    </div>
+
+
+</body>
+</html>
